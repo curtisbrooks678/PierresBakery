@@ -11,5 +11,11 @@ namespace PierresBakery.Tests
     {
       Assert.AreEqual(0, Bread.BreadCost("1"));
     }
+
+    [TestMethod]
+    public void PastryCost_ReturnsIntWithStringInput_0()
+    {
+      Assert.AreEqual(0, Pastry.PastryCost("1"));
+    }
   }
 }

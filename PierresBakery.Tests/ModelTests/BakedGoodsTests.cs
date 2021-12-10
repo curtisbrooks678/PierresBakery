@@ -30,6 +30,9 @@ namespace PierresBakery.Tests
     {
       Assert.AreEqual(2, Pastry.PastryCost("1"));
       Assert.AreEqual(7, Pastry.PastryCost("4"));
+      Assert.AreEqual(15, Pastry.PastryCost("9"));
+      Assert.AreEqual(22, Pastry.PastryCost("13"));
+
     }
   }
 }

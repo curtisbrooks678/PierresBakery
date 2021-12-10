@@ -7,15 +7,15 @@ namespace PierresBakery.Tests
   public class BakedGoodsTests
   {
     [TestMethod]
-    public void BreadCost_ReturnsIntWithStringInput_0()
+    public void BreadCost_ReturnsIntWithStringInput_Int()
     {
-      Assert.AreEqual(0, Bread.BreadCost("1"));
+      Assert.AreEqual(typeof(int), Bread.BreadCost("1").GetType());
     }
 
     [TestMethod]
-    public void PastryCost_ReturnsIntWithStringInput_0()
+    public void PastryCost_ReturnsIntWithStringInput_Int()
     {
-      Assert.AreEqual(0, Pastry.PastryCost("1"));
+      Assert.AreEqual(typeof(int), Pastry.PastryCost("1").GetType());
     }
 
     [TestMethod]

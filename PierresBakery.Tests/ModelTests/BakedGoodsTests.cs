@@ -21,6 +21,9 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadCost_ReturnsCostOfBreadWithStringAmountInput_int()
     {
+      Assert.AreEqual(0, Bread.BreadCost("0"));
+      Assert.AreEqual(5, Bread.BreadCost("1"));
+      Assert.AreEqual(10, Bread.BreadCost("2"));
       Assert.AreEqual(10, Bread.BreadCost("3"));
       Assert.AreEqual(20, Bread.BreadCost("6"));
       Assert.AreEqual(35, Bread.BreadCost("10"));

@@ -17,5 +17,12 @@ namespace PierresBakery.Tests
     {
       Assert.AreEqual(0, Pastry.PastryCost("1"));
     }
+
+    [TestMethod]
+    public void PastryCost_ReturnsCostOfBreadWithStringAmountInput_10()
+    {
+      Assert.AreEqual(10, Bread.BreadCost("3"));
+    }
+
   }
 }

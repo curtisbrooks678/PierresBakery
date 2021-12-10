@@ -1,5 +1,5 @@
 using System;
-using Class.Models;
+using PierresBakery.Models;
 
 public class Program
 {

@@ -23,6 +23,7 @@ namespace PierresBakery.Tests
     {
       Assert.AreEqual(10, Bread.BreadCost("3"));
       Assert.AreEqual(20, Bread.BreadCost("6"));
+      Assert.AreEqual(35, Bread.BreadCost("10"));
     }
 
     [TestMethod]
@@ -32,7 +33,6 @@ namespace PierresBakery.Tests
       Assert.AreEqual(7, Pastry.PastryCost("4"));
       Assert.AreEqual(15, Pastry.PastryCost("9"));
       Assert.AreEqual(22, Pastry.PastryCost("13"));
-
     }
   }
 }

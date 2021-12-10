@@ -4,9 +4,9 @@ namespace PierresBakery.Models
 {
   public class Pastry
   {
-    public static int BreadCost(string input)
+    public static int PastryCost(string input)
     {
-      // return 0; 
+      return 0; 
     }
   }
 }

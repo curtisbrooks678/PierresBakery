@@ -7,7 +7,7 @@ namespace PierresBakery.Models
   {
     public static Dictionary<int, int> pastryPrices = new Dictionary<int, int>()
     {
-      {1, 2}, {2, 4}, {3, 5}, {4, 7}, {5, 9}, {6, 10}
+      {0, 0}, {1, 2}, {2, 4}, {3, 5}, {4, 7}, {5, 9}, {6, 10}
     };
     public static int PastryCost(string input)
     {

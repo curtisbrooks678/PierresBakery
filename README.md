@@ -26,7 +26,7 @@ This application will show user the deals/prices for bread and pastry, then will
 
 ## Known Bugs
 
-* Does not handle plurals for bread and pastry in final readout of amount of each item ordered.
+* Does not handle plurals for bread and pastry orders in final readout of amount of each item ordered.
 
 ## License
 

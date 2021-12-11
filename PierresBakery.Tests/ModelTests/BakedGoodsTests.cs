@@ -32,6 +32,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void PastryCost_ReturnsCostOfPastryWithStringAmountInput_Int()
     {
+      Assert.AreEqual(0, Pastry.PastryCost("0"));
       Assert.AreEqual(2, Pastry.PastryCost("1"));
       Assert.AreEqual(7, Pastry.PastryCost("4"));
       Assert.AreEqual(15, Pastry.PastryCost("9"));

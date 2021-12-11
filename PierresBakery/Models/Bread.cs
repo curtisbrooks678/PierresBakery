@@ -9,7 +9,11 @@ namespace PierresBakery.Models
       int totalCost = 0; 
       int intInput = int.Parse(input); 
       totalCost = intInput * 5; 
-      if (intInput >= 3 && intInput % 3 == 0) 
+      if (intInput == 2)
+      {
+        intInput++;
+      }
+      else if (intInput >= 3 && intInput % 3 == 0) 
       {
         int multOf3 = intInput / 3; 
         totalCost -= (multOf3 * 5); 

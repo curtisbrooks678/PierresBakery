@@ -2,42 +2,34 @@
 
 #### By Curtis Brooks
 
-#### This application converts currency amounts from over 150 currencies worldwide.
+#### This application accepts bakery orders for bread and pastry and returns the total cost for an order.
 
 ## Technologies Used
 
-* JavaScript
-* HTML
-* CSS
-* Node.js
-* [ExchangeRate-API](https://www.exchangerate-api.com/)
+* C#
+* .NET
 
 ## Description
 
-This application will convert any currency amount to and from any of the listed currencies listed on the application page. To use the application, please enter an input amount in the first input box, then refer to the listed currencies on the application page and enter their corresponding currency codes in the second and third input boxes.
+This application will show user the deals/prices for bread and pastry, then will prompt the user to enter how many of each item they would like. Their total cost will be shown in the console according to how many of each item they chose.
 
 ## Setup/Installation Requirements
 
-* Obtain API Key from [ExchangeRate-API](https://www.exchangerate-api.com/)
-  * Follow link above to API site.
-  * Enter email address and click "Get Free Key!" button.
-  * You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
-  * At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
-* Clone [this](https://github.com/curtisbrooks678/currency-exchanger) repository to your desktop
-* Navigate to the top of the directory
-* Open VS Code or other code editor
-* Add .env file to the top of the directory by typing "touch .env" in your terminal.
-* Add API key to your .env file with the following format, then save the file.
-  * API_KEY="Your API Key Here"
-* Type "npm install" in your terminal
-* Type "npm run start" in your terminal to open development server in a browser.
+* Clone [this](https://github.com/curtisbrooks678/PierresBakery) repository to your desktop
+* To run program:
+  * Navigate to the PierresBakery directory in your terminal
+  * Type "dotnet build" in your terminal
+  * Type "dotnet run" in your terminal
+* To run tests:
+  * Navigate to the PierresBakery.Test directory in your terminal
+  * Type "dotnet test" in your terminal
 
 ## Known Bugs
 
-* No known bugs
+* Does not handle plurals for bread and pastry in final readout of amount of each item ordered.
 
 ## License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License) 
 
-Copyright (c) 11/19/21 Curtis Brooks
+Copyright (c) 12/10/21 Curtis Brooks

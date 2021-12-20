@@ -8,32 +8,32 @@ public class Program
     Console.WriteLine("\nWelcome to Pierre's Bakery!\n");
     Console.WriteLine("We serve bread and pastries. Here are the prices/deals for each: \nLoaf of Bread: Buy 2, get 1 free. A single loaf is $5 (save every third loaf you buy) \nPastries: Buy 1 for $2, 3 for $5, 4 for $7, 5 for $9, or 6 for $10 \nBuy as many as you like of each and you'll receive the best possible discount for your purchase based on the deals above.\n");
     Console.WriteLine("How many loaves of bread would you like? Please enter a whole number (i.e. 1, 2, 3, 4, etc.)");
-    string breadOrderInput = Console.ReadLine();
-    if (breadOrderInput == "2")
+    Bread breadOrder = new Bread(Console.ReadLine());
+    if (breadOrder.NumBread == "2")
     {
-      breadOrderInput = "3";
+      breadOrder.NumBread = "3";
       Console.WriteLine("You've ordered 2 loaves of bread. We've added an extra loaf to your order because of our \"Buy 2, get 1 free\" deal.");
     }
     Console.WriteLine("How many pastries would you like? Please enter a whole number (i.e. 1, 2, 3, 4, etc.)");
-    string pastryOrderInput = Console.ReadLine();
-    int breadOrderTotal = Bread.BreadCost(breadOrderInput);
-    int pastryOrderTotal = Pastry.PastryCost(pastryOrderInput);
+    Pastry pastryOrder = new Pastry(Console.ReadLine());
+    int breadOrderTotal = Bread.BreadCost(breadOrder.NumBread);
+    int pastryOrderTotal = Pastry.PastryCost(pastryOrder.NumPastry);
     int orderTotal = breadOrderTotal + pastryOrderTotal;
-    if (breadOrderInput == "1" && pastryOrderInput == "1")
+    if (breadOrder.NumBread == "1" && pastryOrder.NumPastry == "1")
     {
-      Console.WriteLine("\nYou've ordered " + breadOrderInput + " loaf of bread and " + pastryOrderInput + " pastry.");
+      Console.WriteLine("\nYou've ordered " + breadOrder.NumBread + " loaf of bread and " + pastryOrder.NumPastry + " pastry.");
     } 
-    else if (breadOrderInput == "1" && pastryOrderInput != "1")
+    else if (breadOrder.NumBread == "1" && pastryOrder.NumPastry != "1")
     {
-      Console.WriteLine("\nYou've ordered " + breadOrderInput + " loaf of bread and " + pastryOrderInput + " pastries.");
+      Console.WriteLine("\nYou've ordered " + breadOrder.NumBread + " loaf of bread and " + pastryOrder.NumPastry + " pastries.");
     }
-    else if (breadOrderInput != "1" && pastryOrderInput == "1")
+    else if (breadOrder.NumBread != "1" && pastryOrder.NumPastry == "1")
     {
-      Console.WriteLine("\nYou've ordered " + breadOrderInput + " loaves of bread and " + pastryOrderInput + " pastry.");
+      Console.WriteLine("\nYou've ordered " + breadOrder.NumBread + " loaves of bread and " + pastryOrder.NumPastry + " pastry.");
     }
-    else if (breadOrderInput != "1" && pastryOrderInput != "1")
+    else if (breadOrder.NumBread != "1" && pastryOrder.NumPastry != "1")
     {
-      Console.WriteLine("\nYou've ordered " + breadOrderInput + " loaves of bread and " + pastryOrderInput + " pastries.");
+      Console.WriteLine("\nYou've ordered " + breadOrder.NumBread + " loaves of bread and " + pastryOrder.NumPastry + " pastries.");
     }
     Console.WriteLine("Here is the total cost for your order: $" + orderTotal + ".00\nThanks for shopping with us! Come again!\n");
   }

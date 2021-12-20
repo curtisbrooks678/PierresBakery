@@ -6,6 +6,21 @@ namespace PierresBakery.Tests
   [TestClass]
   public class BakedGoodsTests
   {
+    
+    [TestMethod]
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    {
+      Bread newBread = new Bread("1");
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
+
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry("1");
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    }
+    
     [TestMethod]
     public void BreadCost_ReturnsIntWithStringInput_Int()
     {
@@ -19,24 +34,31 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void BreadCost_ReturnsCostOfBreadWithStringAmountInput_int()
+    public void BreadCost_ReturnsCostOfBreadWithStringAmountInputForOneLoafNoDiscount_int()
     {
-      Assert.AreEqual(0, Bread.BreadCost("0"));
-      Assert.AreEqual(5, Bread.BreadCost("1"));
-      Assert.AreEqual(10, Bread.BreadCost("2"));
-      Assert.AreEqual(10, Bread.BreadCost("3"));
-      Assert.AreEqual(20, Bread.BreadCost("6"));
-      Assert.AreEqual(35, Bread.BreadCost("10"));
+      Bread newBread = new Bread("1");
+      Assert.AreEqual(5, Bread.BreadCost(newBread.NumBread));
     }
 
     [TestMethod]
-    public void PastryCost_ReturnsCostOfPastryWithStringAmountInput_Int()
+    public void PastryCost_ReturnsCostOfPastryWithStringAmountInputForOnePastryNoDiscount_int()
     {
-      Assert.AreEqual(0, Pastry.PastryCost("0"));
-      Assert.AreEqual(2, Pastry.PastryCost("1"));
-      Assert.AreEqual(7, Pastry.PastryCost("4"));
-      Assert.AreEqual(15, Pastry.PastryCost("9"));
-      Assert.AreEqual(22, Pastry.PastryCost("13"));
+      Pastry newPastry = new Pastry("1");
+      Assert.AreEqual(2, Pastry.PastryCost(newPastry.NumPastry));
+    }
+
+    [TestMethod]
+    public void BreadCost_ReturnsCostOfBreadWithStringAmountInputForMultipleLoavesIncludingDiscount_int()
+    {
+      Bread newBread = new Bread("3");
+      Assert.AreEqual(10, Bread.BreadCost(newBread.NumBread));
+    }
+
+    [TestMethod]
+    public void PastryCost_ReturnsCostOfPastryWithStringAmountInputForMultiplePastiesIncludingDiscount_int()
+    {
+      Pastry newPastry = new Pastry("4");
+      Assert.AreEqual(7, Pastry.PastryCost(newPastry.NumPastry));
     }
   }
 }

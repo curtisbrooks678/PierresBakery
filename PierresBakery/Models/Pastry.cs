@@ -9,6 +9,12 @@ namespace PierresBakery.Models
     {
       {0, 0}, {1, 2}, {2, 4}, {3, 5}, {4, 7}, {5, 9}, {6, 10}
     };
+    public string NumPastry { get; set; }
+
+    public Pastry(string numPastry)
+    {
+      NumPastry = numPastry;
+    }
     public static int PastryCost(string input)
     {
       int totalCost = 0; 

@@ -4,6 +4,13 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
+
+    public string NumBread { get; set; }
+
+    public Bread(string numBread)
+    {
+      NumBread = numBread;
+    }
     public static int BreadCost(string input) 
     {
       int totalCost = 0; 
